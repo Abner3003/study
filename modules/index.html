@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .container__main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .buttons__container{
+            display: flex;
+            flex-direction: row;
+            row-gap: 2rem;
+            height: 3rem;
+            min-width: 50px;
+            background-color: rgba(7, 64, 148, 0.133);
+        }
+
+        .content{
+            display: flex;
+            padding: 2rem;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            width: 100%;
+            background-color: azure;
+            margin: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Axios Example</h1>
+
+    <div class="container__main">
+        <div class="buttons__container">
+            <button id="btnChar">Personagens</button>
+            <button>Episodios</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+</body>
+</html>
+
+ <!-- Importa o script JavaScript como um módulo -->
+ <script type="module">
+    import { getCharacters } from './learnModules.js';
+
+    // Adiciona um ouvinte de evento para o botão de Personagens
+    document.getElementById('btnChar').addEventListener('click', function() {
+        getCharacters();
+    });
+
+    // Adiciona um ouvinte de evento para o botão de Episódios (fictício)
+    document.getElementById('btnEpisodes').addEventListener('click', function() {
+        alert('Função de Episódios ainda não implementada');
+    });
+</script>
