@@ -5,9 +5,7 @@ if(!window.axios){
 const apiClient = axios.create({
     baseURL: 'https://rickandmortyapi.com/api',
     timeout: 10000,
-    headers: {
-        'Content-Type': 'application/json',
-    }
+
 })
 
 function getRequest(endpoint) {

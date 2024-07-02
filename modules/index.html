@@ -35,34 +35,33 @@
             background-color: azure;
             margin: 2rem;
         }
+        .character-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+        }
+        .character-card img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <h1>Axios Example</h1>
-
     <div class="container__main">
         <div class="buttons__container">
             <button id="btnChar">Personagens</button>
-            <button>Episodios</button>
+            <button id="btnEpisodes">Episodios</button>
         </div>
-        <div class="content">
-
+        <div id="character-list">
         </div>
     </div>
 </body>
 </html>
 
  <!-- Importa o script JavaScript como um módulo -->
- <script type="module">
-    import { getCharacters } from './learnModules.js';
-
-    // Adiciona um ouvinte de evento para o botão de Personagens
-    document.getElementById('btnChar').addEventListener('click', function() {
-        getCharacters();
-    });
-
-    // Adiciona um ouvinte de evento para o botão de Episódios (fictício)
-    document.getElementById('btnEpisodes').addEventListener('click', function() {
-        alert('Função de Episódios ainda não implementada');
-    });
-</script>
+ <script type="module" src="./learnModules.js" defer></script>
